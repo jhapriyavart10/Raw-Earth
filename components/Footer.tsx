@@ -86,10 +86,10 @@ export default function Footer() {
               <ul className="space-y-[6px] text-[15px] font-manrope">
                 <li><Link href="/product-analogue">Home</Link></li>
                 <li><Link href="https://azure-takeaways-956863.framer.app/blogs">Dojo</Link></li>
-                <li><Link href="/testimonials">Testimonials</Link></li>
+                <li><Link href="/product-analogue">Testimonials</Link></li>
                 <li><Link href="/profile">User Account</Link></li>
                 <li><Link href="/product-analogue">Shop</Link></li>
-                <li><Link href="/faqs">FAQs</Link></li>
+                <li><Link href="/profile">FAQs</Link></li>
               </ul>
             </div>
 

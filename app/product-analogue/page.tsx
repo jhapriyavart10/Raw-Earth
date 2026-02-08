@@ -40,8 +40,8 @@ type Filters = {
 };
 
 const QUICK_LINKS = [
-  { title: 'For Her', image: '/assets/images/For Her.png', filterType: 'gender', filterValue: 'For Her' },
-  { title: 'For Him', image: '/assets/images/For Him.png', filterType: 'gender', filterValue: 'For Him' },
+  { title: 'For Her', image: '/assets/images/For-Her.png', filterType: 'gender', filterValue: 'For Her' },
+  { title: 'For Him', image: '/assets/images/For-Him.png', filterType: 'gender', filterValue: 'For Him' },
   { title: 'Charms & Pendants', image: '/assets/images/Charms.png', filterType: 'category', filterValue: 'Charms & Pendants' },
   { title: 'Crystal Bracelets', image: '/assets/images/Bracelets.png', filterType: 'category', filterValue: 'Bracelets' }
 ];

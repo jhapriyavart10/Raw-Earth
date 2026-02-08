@@ -149,11 +149,11 @@ export default function Header() {
             {/* Desktop Nav */}
             <nav className="hidden lg:flex items-center gap-[40px]">
               <Link href="/product-analogue" className="hover:text-gray-300 transition-colors text-base font-manrope">Shop</Link>
-              <Link href="/" className="hover:text-gray-300 transition-colors text-base font-manrope">Plans</Link>
+              <Link href="/cart" className="hover:text-gray-300 transition-colors text-base font-manrope">Plans</Link>
               <Link href="https://azure-takeaways-956863.framer.app/blogs" className="text-base transition-colors hover:text-gray-300 font-manrope">
                 Raw Earth Dojo
               </Link>
-              <Link href="/about" className="hover:text-gray-300 transition-colors text-base font-manrope">About</Link>
+              <Link href="/profile" className="hover:text-gray-300 transition-colors text-base font-manrope">About</Link>
             </nav>
 
             {/* Logo */}

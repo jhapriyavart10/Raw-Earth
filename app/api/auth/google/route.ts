@@ -1,8 +1,12 @@
 import { createCustomer, loginCustomer } from '@/lib/shopify';
 import { cookies } from 'next/headers';
 import { NextResponse } from 'next/server';
-import crypto from 'crypto';
+
+// 1. Remove the Node.js crypto import
+// import crypto from 'crypto'; 
+
 export const runtime = 'edge';
+
 async function getGoogleUser(code: string) {
   const rootUrl = 'https://oauth2.googleapis.com/token';
   
@@ -59,10 +63,27 @@ export async function GET(req: Request) {
   try {
     const googleUser = await getGoogleUser(code); 
     const secret = process.env.GOOGLE_CLIENT_SECRET || 'fallback-secret';
-    const securePassword = crypto
-      .createHmac('sha256', secret)
-      .update(googleUser.email)
-      .digest('hex');
+    
+    // 2. REPLACEMENT: Generate HMAC SHA-256 using Web Crypto API
+    const encoder = new TextEncoder();
+    const keyData = encoder.encode(secret);
+    const key = await crypto.subtle.importKey(
+      'raw',
+      keyData,
+      { name: 'HMAC', hash: 'SHA-256' },
+      false,
+      ['sign']
+    );
+    const signature = await crypto.subtle.sign(
+      'HMAC',
+      key,
+      encoder.encode(googleUser.email)
+    );
+    // Convert buffer to hex string
+    const securePassword = Array.from(new Uint8Array(signature))
+      .map(b => b.toString(16).padStart(2, '0'))
+      .join('');
+    // END REPLACEMENT
 
     try {
       await createCustomer({
@@ -81,7 +102,6 @@ export async function GET(req: Request) {
     const accessToken = (loginResponse.body as any)?.customerAccessTokenCreate?.customerAccessToken?.accessToken;
 
     if (accessToken) {
-      // --- FIX 2: Reliable Cookie Setting on Redirect ---
       const response = NextResponse.redirect(new URL('/product-analogue', req.url));
 
       response.cookies.set('customerAccessToken', accessToken, {

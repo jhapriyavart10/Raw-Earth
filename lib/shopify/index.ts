@@ -3,28 +3,43 @@ import { customerRecoverMutation } from './mutations';
 export async function shopifyFetch<T>({
   query,
   variables = {},
-  cache = 'force-cache'
+  cache = 'no-store' // <--- FIXED: Changed from 'force-cache' to 'no-store'
 }: {
   query: string;
   variables?: any;
   cache?: RequestCache;
 }): Promise<{ status: number; body: T } | never> {
-  const endpoint = process.env.SHOPIFY_STORE_DOMAIN!;
-  const key = process.env.SHOPIFY_STOREFRONT_ACCESS_TOKEN!;
+  const domain = process.env.SHOPIFY_STORE_DOMAIN;
+  const token = process.env.SHOPIFY_STOREFRONT_ACCESS_TOKEN;
+  const version = process.env.SHOPIFY_API_VERSION || '2025-10';
+
+  // Debug check
+  if (!domain || !token) {
+    throw new Error("Missing Shopify Environment Variables in shopifyFetch");
+  }
+
+  // Ensure no "https://" in domain
+  const cleanDomain = domain.replace(/^https?:\/\//, '').replace(/\/$/, '');
+  const endpoint = `https://${cleanDomain}/api/${version}/graphql.json`;
 
   let retries = 3;
 
   while (retries > 0) {
     try {
-      const result = await fetch(`https://${endpoint}/api/${process.env.SHOPIFY_API_VERSION}/graphql.json`, {
+      const result = await fetch(endpoint, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
-          'X-Shopify-Storefront-Access-Token': key
+          'X-Shopify-Storefront-Access-Token': token
         },
         body: JSON.stringify({ query, variables }),
-        cache
+        cache: cache === 'force-cache' ? 'no-store' : cache // Safety fallback: Cloudflare hates force-cache
       });
+
+      if (!result.ok) {
+        const text = await result.text();
+        throw new Error(`Shopify API Error (${result.status}): ${text}`);
+      }
 
       const body = await result.json();
 
@@ -47,8 +62,8 @@ export async function shopifyFetch<T>({
         };
       }
       
-      // Wait 1 second before retrying to let the network stabilize
-      await new Promise((resolve) => setTimeout(resolve, 1000));
+      // Reduce wait time to prevent Cloudflare timeout
+      await new Promise((resolve) => setTimeout(resolve, 500)); 
     }
   }
 

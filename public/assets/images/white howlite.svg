@@ -1,0 +1,49 @@
+<svg width="34" height="26" viewBox="0 0 34 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g filter="url(#filter0_g_1389_751)">
+<path d="M6.15639 4.28186C2.60655 6.83331 1.22266 10.7035 1.22266 12.7397C1.22266 15.3139 2.15985 17.8001 3.85914 19.7338L4.62928 20.6102C6.11724 22.0198 10.1345 24.8156 18.2164 24.7216C26.2983 24.6277 27.2214 21.9415 28.6311 20.6102C30.8238 18.3782 34.1287 12.6222 29.8058 7.45354C25.4829 2.28487 21.5839 1.14932 18.2164 1.22764C15.3971 1.22764 9.91543 1.58005 6.15639 4.28186Z" fill="#F6D8AB"/>
+<path d="M18.2021 0.616516C21.7719 0.533498 25.8438 1.76219 30.2754 7.06085C32.5786 9.81477 32.8542 12.7512 32.2568 15.2737C31.666 17.7684 30.2245 19.8615 29.0674 21.0394L29.0596 21.0472L29.0508 21.055C28.8975 21.1998 28.746 21.369 28.5713 21.5687C28.4014 21.7629 28.2073 21.9885 27.9932 22.2181C27.5563 22.6862 27.0121 23.1918 26.2402 23.6546C24.697 24.5798 22.3265 25.2856 18.2236 25.3333C9.9822 25.4291 5.81108 22.5727 4.20801 21.054L4.18848 21.0355L4.16992 21.014L3.39941 20.138C1.60197 18.0926 0.610352 15.4625 0.610352 12.7396C0.610408 10.5066 2.08895 6.45099 5.79883 3.78448C9.72304 0.963955 15.3715 0.617674 18.2021 0.616516Z" stroke="#3F3F3F" stroke-width="1.22396"/>
+</g>
+<path d="M18.2021 0.616516C21.7719 0.533498 25.8438 1.76219 30.2754 7.06085C32.5786 9.81477 32.8542 12.7512 32.2568 15.2737C31.666 17.7684 30.2245 19.8615 29.0674 21.0394L29.0596 21.0472L29.0508 21.055C28.8975 21.1998 28.746 21.369 28.5713 21.5687C28.4014 21.7629 28.2073 21.9885 27.9932 22.2181C27.5563 22.6862 27.0121 23.1918 26.2402 23.6546C24.697 24.5798 22.3265 25.2856 18.2236 25.3333C9.9822 25.4291 5.81108 22.5727 4.20801 21.054L4.18848 21.0355L4.16992 21.014L3.39941 20.138C1.60197 18.0926 0.610352 15.4625 0.610352 12.7396C0.610408 10.5066 2.08895 6.45099 5.79883 3.78448C9.72304 0.963955 15.3715 0.617674 18.2021 0.616516Z" stroke="#3F3F3F" stroke-width="1.22396"/>
+<defs>
+<filter id="filter0_g_1389_751" x="-16.7" y="-16.7" width="66.5406" height="59.3479" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+<feTurbulence type="fractalNoise" baseFrequency="0.22727271914482117 0.22727271914482117" numOctaves="3" seed="2649" result="displacementX" />
+<feTurbulence type="fractalNoise" baseFrequency="0.22727271914482117 0.22727271914482117" numOctaves="3" seed="2650" result="displacementY" />
+<feColorMatrix in="displacementX" type="matrix" values="0 0 0 1 0  0 0 0 0 0  0 0 0 0 0  0 0 0 0 1" result="displacementXRed" />
+<feColorMatrix in="displacementY" type="matrix" values="0 0 0 0 0  0 0 0 1 0  0 0 0 0 0  0 0 0 0 1" />
+<feComposite in="displacementXRed" operator="arithmetic" k1="0" k2="1" k3="1" k4="0"/>
+<feDisplacementMap in="shape" scale="33.400001525878906" xChannelSelector="R" yChannelSelector="G" width="100%" height="100%" />
+<feColorMatrix type="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 1 0" />
+<feComponentTransfer result="sourceDisplacedAlpha">
+<feFuncA type="gamma" exponent="0.2" />
+</feComponentTransfer>
+<feColorMatrix in="shape" type="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 1 0" />
+<feComponentTransfer result="inputSourceAlpha">
+<feFuncA type="gamma" exponent="0.2" />
+</feComponentTransfer>
+<feComposite in="sourceDisplacedAlpha" operator="arithmetic" k1="1" k2="0" k3="0" k4="0" result="displacementAlphasMultiplied"/>
+<feComposite in="displacementAlphasMultiplied"  operator="arithmetic" k1="0" k2="0" k3="-0.5" k4="0.5" result="centeringAdjustment"/>
+<feComposite in="displacementX" in2="displacementAlphasMultiplied" operator="arithmetic" k1="1" k2="0" k3="0" k4="0" />
+<feComposite in="centeringAdjustment" operator="arithmetic" k1="0" k2="1" k3="1" k4="0" />
+<feColorMatrix  type="matrix" values="0 0 0 1 0  0 0 0 0 0  0 0 0 0 0  0 0 0 0 1" result="displacementXFinal" />
+<feComposite in="displacementY" in2="displacementAlphasMultiplied" operator="arithmetic" k1="1" k2="0" k3="0" k4="0" />
+<feComposite in="centeringAdjustment" operator="arithmetic" k1="0" k2="1" k3="1" k4="0" />
+<feColorMatrix  type="matrix" values="0 0 0 0 0  0 0 0 1 0  0 0 0 0 0  0 0 0 0 1" result="displacementYFinal" />
+<feComposite in="displacementXFinal" in2="displacementYFinal" operator="arithmetic" k1="0" k2="1" k3="1" k4="0" />
+<feComposite in2="displacementAlphasMultiplied" operator="in" result="displacementMap" />
+<feFlood flood-color="rgb(127, 127, 127)" flood-opacity="1"/>
+<feComposite in2="displacementAlphasMultiplied" operator="out" />
+<feComposite in2="displacementMap" operator="over" result="displacementMapWithBg"/>
+<feDisplacementMap in="shape" scale="33.400001525878906" xChannelSelector="R" yChannelSelector="G" width="100%" height="100%" result="displacedImage" />
+<feColorMatrix in="shape" type="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 127 0" result="imageOpaque" />
+<feDisplacementMap in="imageOpaque" in2="displacementMapWithBg" scale="33.400001525878906" xChannelSelector="R" yChannelSelector="G" width="100%" height="100%" result="displacedImageOpaque" />
+<feColorMatrix in="displacedImage" type="matrix" values="0 0 0 1 0  0 0 0 0 0  0 0 0 0 0  0 0 0 127 0" result="displacedImageRed" />
+<feColorMatrix in="shape" type="matrix" values="0 0 0 1 0  0 0 0 0 0  0 0 0 0 0  0 0 0 127 0" />
+<feComposite in="displacedImageRed"  operator="atop" result="transparencyRedMap"/>
+<feColorMatrix in="transparencyRedMap" type="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  1 0 0 0 0" result="transparencyAlphaMap" />
+<feComposite in="displacedImageOpaque" in2="imageOpaque" operator="over" />
+<feComposite in2="transparencyAlphaMap" operator="in" result="effect1_texture_1389_751"/>
+</filter>
+</defs>
+</svg>

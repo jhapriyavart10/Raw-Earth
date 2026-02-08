@@ -2,6 +2,8 @@ import { shopifyFetch } from '@/lib/shopify';
 import { cookies } from 'next/headers';
 import { NextResponse } from 'next/server';
 
+export const runtime = 'edge';
+
 const getCustomerQuery = `
   query getCustomer($customerAccessToken: String!) {
     customer(customerAccessToken: $customerAccessToken) {

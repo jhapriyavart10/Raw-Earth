@@ -1,7 +1,7 @@
 import { loginCustomer } from '@/lib/shopify';
 import { cookies } from 'next/headers';
 import { NextResponse } from 'next/server';
-
+export const runtime = 'edge';
 interface CustomerAccessTokenCreateData {
   customerAccessTokenCreate: {
     customerAccessToken: { accessToken: string; expiresAt: string } | null;

@@ -1,7 +1,7 @@
 import { shopifyFetch } from '@/lib/shopify';
 import { cookies } from 'next/headers';
 import { NextResponse } from 'next/server';
-
+export const runtime = 'edge';
 const customerUpdateMutation = `
   mutation customerUpdate($customerAccessToken: String!, $customer: CustomerUpdateInput!) {
     customerUpdate(customerAccessToken: $customerAccessToken, customer: $customer) {

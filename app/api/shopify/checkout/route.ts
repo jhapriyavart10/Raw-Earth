@@ -1,6 +1,6 @@
 import { NextResponse } from 'next/server';
 import { shopifyFetch } from '@/lib/shopify'; 
-
+export const runtime = 'edge';
 /* -------------------------------------------------------------------------- */
 /* MUTATIONS                                 */
 /* -------------------------------------------------------------------------- */

@@ -1,6 +1,7 @@
 import { createCustomer } from '@/lib/shopify';
 import { NextResponse } from 'next/server';
 import { z } from 'zod';
+export const runtime = 'edge';
 
 // 1. Define the Validation Schema
 const RegisterSchema = z.object({

@@ -2,6 +2,7 @@ import { cookies } from 'next/headers';
 import { redirect } from 'next/navigation';
 import Header from '@/components/Header';
 
+export const runtime = 'edge';
 export default async function AccountPage() {
   const cookieStore = await cookies();
   const customerToken = cookieStore.get('customerAccessToken')?.value;

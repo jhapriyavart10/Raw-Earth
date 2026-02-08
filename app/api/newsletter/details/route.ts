@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server';
-
+export const runtime = 'edge';
 export async function GET(request: NextRequest) {
   try {
     const listId = process.env.KLAVIYO_NEWSLETTER_LIST_ID; // Add your List ID to .env

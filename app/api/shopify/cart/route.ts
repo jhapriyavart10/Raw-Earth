@@ -1,7 +1,7 @@
 import { NextResponse } from 'next/server';
 import { CartService } from '@/services/cart.service';
 import { shopifyFetch } from '@/lib/shopify'; 
-
+export const runtime = 'edge';
 export async function GET(req: Request) {
   const { searchParams } = new URL(req.url);
   const cartId = searchParams.get('id');

@@ -1,6 +1,6 @@
 import { shopifyFetch } from '@/lib/shopify';
 import { NextResponse } from 'next/server';
-
+export const runtime = 'edge';
 const CART_DISCOUNT_MUTATION = `
   mutation cartDiscountCodesUpdate($cartId: ID!, $discountCodes: [String!]) {
     cartDiscountCodesUpdate(cartId: $cartId, discountCodes: $discountCodes) {

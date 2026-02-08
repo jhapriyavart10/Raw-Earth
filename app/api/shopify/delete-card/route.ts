@@ -1,7 +1,7 @@
 import { shopifyFetch, updateCustomer } from '@/lib/shopify';
 import { cookies } from 'next/headers';
 import { NextResponse } from 'next/server';
-
+export const runtime = 'edge';
 const getExistingCardsQuery = `
   query getCustomer($customerAccessToken: String!) {
     customer(customerAccessToken: $customerAccessToken) {

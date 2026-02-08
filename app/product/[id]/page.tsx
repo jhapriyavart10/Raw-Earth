@@ -5,7 +5,7 @@ import { useEffect, useState } from 'react';
 import Desktop_pro from './desktop_pro';
 import Header from '@/components/Header';
 import { motion } from 'framer-motion';
-
+export const runtime = 'edge';
 export default function ProductPage() {
   const params = useParams();
   const handle = params.id as string; // The URL contains the shopify handle

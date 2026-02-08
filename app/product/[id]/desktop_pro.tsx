@@ -7,7 +7,7 @@ import Header from '@/components/Header';
 import { useCart } from '@/app/context/CartContext';
 import CartDrawer from '@/components/CartDrawer';
 import { AnimatePresence, motion } from 'framer-motion';
-
+export const runtime = 'edge';
 // Types for backend integration
 interface Product {
   id: string;

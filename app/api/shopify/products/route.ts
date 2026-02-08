@@ -1,6 +1,6 @@
 import { NextResponse } from 'next/server';
 import { getProducts, getProduct } from '@/services/products.service';
-
+export const runtime = 'edge';
 export async function GET(req: Request) {
   const { searchParams } = new URL(req.url);
   const handle = searchParams.get('handle');

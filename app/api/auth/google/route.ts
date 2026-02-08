@@ -2,7 +2,7 @@ import { createCustomer, loginCustomer } from '@/lib/shopify';
 import { cookies } from 'next/headers';
 import { NextResponse } from 'next/server';
 import crypto from 'crypto';
-
+export const runtime = 'edge';
 async function getGoogleUser(code: string) {
   const rootUrl = 'https://oauth2.googleapis.com/token';
   
